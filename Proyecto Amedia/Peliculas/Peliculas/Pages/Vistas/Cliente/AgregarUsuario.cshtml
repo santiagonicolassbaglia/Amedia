@@ -1,0 +1,50 @@
+﻿@page
+@model Peliculas.Pages.Vistas.Cliente.AgregarUsuarioModel
+@{
+}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <title>Formulario Alta</title>
+    <link rel="stylesheet" href="~/css/Login.css">
+</head>
+<body>
+    <section class="form-loginAltaUsuario">
+
+        <h2> Alta usuario</h2>
+
+        <form method="post">
+
+
+
+            <input asp-for="@Model.persona.Nombre" class="controls" type="text" name="nombre" placeholder="Nombre">
+            <input asp-for="@Model.persona.Apellido" class="controls" type="text" name="apellido" placeholder="Apellido">
+            <input asp-for="@Model.persona.Documento" class="controls "  oninput="this.value=this.value.replace(/[^0-9]/g,'');" name="documento" placeholder="Documento">
+            <input asp-for="@Model.persona.Usuario" class="controls" type="text" name="usuario" placeholder="Usuario">
+            <input asp-for="@Model.persona.Contrasenia" class="controls" type="password" name="Contrasenia" placeholder="Contraseña">
+
+
+            <input class="buttons btn-primary  btn-sm"  type="submit" asp-page-handler="AltaUsuario" value=" INGRESAR ">
+
+
+            <input class="buttons btn-primary  btn-sm"   type="submit" asp-page-handler="AltaAdministrador" value="Agregar Administrador  ">
+          
+
+           
+                <div class="col-md-6 text-right" style="margin-left: 29rem;">
+                    <a class="btn btn-primary" href="/Index">Volver</a>
+                </div>
+           
+            @Html.ValidationMessageFor(Model => Model.ErrorMessage, "", new { @class = "text-danger" })
+            @Html.ValidationMessageFor(Model => Model.MensajeOk, "", new { @class = "text-primary" })
+
+        </form>
+
+        
+    </section>
+ 
+</body>
+</html>
+
+ 

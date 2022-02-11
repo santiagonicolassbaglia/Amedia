@@ -1,0 +1,86 @@
+﻿@*@model List<PeliculasModel.tPelicula>*@
+
+@page
+@model Peliculas.Pages.Vistas.Administrador.HomeAdministradorModel
+@{
+}
+
+<div class="row" style="margin-bottom: 5rem;margin-left: 3rem;">
+    <div class="col-sm-6">
+        <h3> <b> Lista de peliculas</b>  </h3>
+    </div>
+
+
+</div>
+
+<form method="post">
+
+    <div class="col-md-6 text-right">
+        <a class="btn btn-success" href="~/Vistas/Administrador/AltaPelicula" style="margin-bottom: 2rem;margin-right: 78rem;">Agregar Peliculas</a>
+    </div>
+    <div class="row" style=" margin-left: 3rem;">
+
+        @if (Model.Peliculas.Count() > 0)
+        {
+         
+            <table class=" table table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <td>ID </td>
+                        <td>Titulo</td>
+                        <td>Cantidad Disponible Alquiler</td>
+                        <td>Cantidad Disponible Venta</td>
+                        <td>Precio Alquiler</td>
+                        <td>Precio Venta</td>
+
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    @foreach (var item in Model.Peliculas)
+
+                    {
+                        <tr>
+                            <td>@item.Id</td>
+                            <td>@item.Nombre</td>
+                            <td>@item.CantidadDisponibleAlquiler</td>
+                            <td>@item.CantidadDisponibleVenta</td>
+                            <td>@item.PrecioAlquiler</td>
+                            <td>@item.PrecioVenta</td>
+
+                            <td>
+                                @*<a href="/Vistas/Administrador/EditarPelicula" class=" btn btn-warning"> Editar</a>*@
+                                <input class="buttons btn-primary  btn-sm" style=" margin-bottom: 10rem;" type="submit" asp-page-handler="Editar" value="Editar Película" asp-route-idPelicula=@item.Id>
+                                <input class="buttons btn-warning  btn-sm" style=" margin-bottom: 10rem;" type="submit" asp-page-handler="Eliminar" value="Eliminar Película" asp-route-idPelicula=@item.Id>
+                               
+
+                            </td>
+
+                        </tr>
+
+
+
+
+                    }
+
+
+
+                </tbody>
+
+
+            </table>
+
+            <div class="col-md-6 text-right">
+                <a class="btn btn-primary" href="~/Index">Volver</a>
+            </div>
+        }
+        else
+        {
+            <p> No hay peliculas cargadas </p>
+        }
+
+
+
+    </div>
+</form>

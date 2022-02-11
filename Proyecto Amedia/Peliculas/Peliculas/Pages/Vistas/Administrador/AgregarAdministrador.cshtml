@@ -1,0 +1,51 @@
+﻿@page
+@model Peliculas.Pages.Vistas.Administrador.AgregarAdministradorModel
+@{
+}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <title>Formulario Alta</title>
+    <link rel="stylesheet" href="~/css/Login.css">
+</head>
+<body>
+    <section class="form-loginAltaUsuario">
+        <form method="post">
+
+            <h2> Alta usuario</h2>
+
+
+
+            <input asp-for="@Model.persona.Nombre" class="controls" type="text" name="nombre" placeholder="Nombre">
+            <input asp-for="@Model.persona.Apellido" class="controls" type="text" name="apellido" placeholder="Apellido">
+            <input asp-for="@Model.persona.Documento" class="controls" oninput="this.value=this.value.replace(/[^0-9]/g,'');" name="documento" placeholder="Documento">
+            <input asp-for="@Model.persona.Usuario" class="controls" type="text" name="usuario" placeholder="Usuario">
+            <input asp-for="@Model.persona.Contrasenia" class="controls" type="password" name="Contrasenia" placeholder="Contraseña">
+            <select class="form-control" asp-for="@Model.IdRol" style=" margin-bottom: 6rem;">
+                <option value=0>
+                    Seleccione opci&oacute;n
+                </option>
+                <option value=1>
+                    Administrador
+                </option>
+                <option value=2>
+                    Cliente
+                </option>
+
+            </select>
+
+            <input class="buttons btn-primary  btn-sm" style=" margin-bottom: 6rem;" type="submit" asp-page-handler="AltaAdministrador" value=" INGRESAR " onclick="ConfirmarUsuario()">
+            @Html.ValidationMessageFor(Model => Model.ErrorMessage, "", new { @class = "text-danger" })
+            <div class="col-md-6 text-right"  >
+                <a class="btn btn-primary" href="/Vistas/Administrador/HomeAdministrador">Volver</a>
+            </div>
+
+        </form>
+
+
+    </section>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="~/Scripts/MensajesUsuario.js"></script>
+</body>
+</html>

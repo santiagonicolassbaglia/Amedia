@@ -1,0 +1,15 @@
+C:\Users\santi\Desktop\Proyecto Amedia\Peliculas\PeliculasModel\bin\Debug\net5.0\PeliculasModel.deps.json
+C:\Users\santi\Desktop\Proyecto Amedia\Peliculas\PeliculasModel\bin\Debug\net5.0\PeliculasModel.dll
+C:\Users\santi\Desktop\Proyecto Amedia\Peliculas\PeliculasModel\bin\Debug\net5.0\ref\PeliculasModel.dll
+C:\Users\santi\Desktop\Proyecto Amedia\Peliculas\PeliculasModel\bin\Debug\net5.0\PeliculasModel.pdb
+C:\Users\santi\Desktop\Proyecto Amedia\Peliculas\PeliculasModel\obj\Debug\net5.0\PeliculasModel.csproj.AssemblyReference.cache
+C:\Users\santi\Desktop\Proyecto Amedia\Peliculas\PeliculasModel\obj\Debug\net5.0\PeliculasModel.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\santi\Desktop\Proyecto Amedia\Peliculas\PeliculasModel\obj\Debug\net5.0\PeliculasModel.AssemblyInfoInputs.cache
+C:\Users\santi\Desktop\Proyecto Amedia\Peliculas\PeliculasModel\obj\Debug\net5.0\PeliculasModel.AssemblyInfo.cs
+C:\Users\santi\Desktop\Proyecto Amedia\Peliculas\PeliculasModel\obj\Debug\net5.0\PeliculasModel.csproj.CoreCompileInputs.cache
+C:\Users\santi\Desktop\Proyecto Amedia\Peliculas\PeliculasModel\obj\Debug\net5.0\PeliculasModel.dll
+C:\Users\santi\Desktop\Proyecto Amedia\Peliculas\PeliculasModel\obj\Debug\net5.0\ref\PeliculasModel.dll
+C:\Users\santi\Desktop\Proyecto Amedia\Peliculas\PeliculasModel\obj\Debug\net5.0\PeliculasModel.pdb
+C:\Users\santi\Desktop\Proyecto Amedia\Peliculas\PeliculasModel\bin\Debug\net5.0\PeliculasModel.runtimeconfig.json
+C:\Users\santi\Desktop\Proyecto Amedia\Peliculas\PeliculasModel\bin\Debug\net5.0\PeliculasModel.runtimeconfig.dev.json
+C:\Users\santi\Desktop\Proyecto Amedia\Peliculas\PeliculasModel\obj\Debug\net5.0\PeliculasModel.genruntimeconfig.cache

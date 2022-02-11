@@ -1,0 +1,608 @@
+﻿@page
+@model Peliculas.Pages.Vistas.Cliente.HomeModel
+@{
+}
+ 
+<!-- //header -->
+<!-- banner -->
+<div class="banner">
+    <div id="kb" class="carousel kb_elastic animate_text kb_wrapper" data-ride="carousel" data-interval="6000" data-pause="hover">
+        <!-- Wrapper-for-Slides -->
+        <div class="carousel-inner" role="listbox">
+            <div class="item active">
+                <!-- First-Slide -->
+                <img src="~/Image/20-peliculas-para-disfrutar-familia.jpg" alt="" class="img-responsive" />
+                <div class="carousel-caption kb_caption kb_caption_right">
+                    <h3 data-animation="animated flipInX">Amedia <span>Promo</span> %50 por 2 mes</h3>
+                    <h4 data-animation="animated flipInX">Imperdible!</h4>
+                </div>
+            </div>
+            <div class="item">
+                <!-- Second-Slide -->
+                <img src="~/Image/PelisAmedia.jpg" alt="" class="img-responsive" />
+                <div class="carousel-caption kb_caption kb_caption_right">
+                    <h3 data-animation="animated fadeInDown">Las Mejores Películas para ver en familia</h3>
+                    <h4 data-animation="animated fadeInUp">Amedia</h4>
+                </div>
+            </div>
+            <div class="item">
+                <!-- Third-Slide -->
+                <img src="~/Image/Sintítulo.jpg" alt="" class="img-responsive" />
+                <div class="carousel-caption kb_caption kb_caption_center">
+                    <h3 data-animation="animated fadeInLeft"> vivi la mejor experiencia </h3>
+                    <h4 data-animation="animated flipInX">con Amedia Pelis!</h4>
+                </div>
+            </div>
+        </div>
+        <!-- Left-Button -->
+        <a class="left carousel-control kb_control_left" href="#kb" role="button" data-slide="prev">
+            <span class="fa fa-angle-left kb_icons" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <!-- Right-Button -->
+        <a class="right carousel-control kb_control_right" href="#kb" role="button" data-slide="next">
+            <span class="fa fa-angle-right kb_icons" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+    <script src="~/Scripts/custom.js"></script>
+    <script src="~/Scripts/FetchPeliculas.js"></script>
+</div>
+<!-- //banner -->
+<!-- welcome -->
+<div class="welcome" style=" background-color: #ad0000e3;">
+    <div class="container">
+        <div class="welcome-info">
+            <div class="bs-example bs-example-tabs" role="tabpanel" data-example-id="togglable-tabs">
+                <ul id="myTab" class=" nav-tabs" role="tablist">
+                    <li role="presentation" class="active">
+                        <a href="#home" id="home-tab" role="tab" data-toggle="tab">
+                            <img src="~/Image/Terror/casaEncantada.png" style="width: 110px;" alt="img" />
+                            <input type="hidden" name="Terror" value="4" asp-for="generoPelicula.IdPelicula" />
+                            <h5>Terror</h5>
+                        </a>
+                    </li>
+                    <li role="presentation">
+                        <a href="#carl" role="tab" id="carl-tab" data-toggle="tab">
+                            <img src="~/Image/Accion/armas.png" style="width: 110px;" alt="img" />
+                            <input type="hidden" name="Drama" value="1" asp-for="generoPelicula.IdPelicula" />
+                            <h5><b>Acción</b></h5>
+                        </a>
+                    </li>
+                    <li role="presentation">
+                        <a href="#james" role="tab" id="james-tab" data-toggle="tab">
+                            <img src="~/Image/Comedia/Disney.png" style="width: 110px;" alt="img" />
+                            <input type="hidden" name="Comedia" value="2" asp-for="generoPelicula.IdPelicula" />
+                            <h5><b>Comedia</b></h5>
+                        </a>
+                    </li>
+                    <li role="presentation">
+                        <a href="#decor" role="tab" id="decor-tab" data-toggle="tab">
+                            <img src="~/Image/Drama/harry-potter.png" style="width: 110px;" alt="img" />
+                            <input type="hidden" name="Drama" value="3" asp-for="generoPelicula.IdPelicula" />
+                            <h5><b>Drama</b></h5>
+                        </a>
+                    </li>
+                   
+                </ul>
+                <div class="clearfix"> </div>
+                <h3 class="w3ls-title">Compra / Alquila </h3>
+                <div id="myTabContent" class="tab-content">
+                    <div role="tabpanel" class="tab-pane fade in active" id="home" aria-labelledby="home-tab">
+                        <div class="tabcontent-grids">
+                            <div id="owl-demo" class="owl-carousel">
+                                <div class="item">
+                                    <div class="glry-w3agile-grids agileits">
+                                        <div class="new-tag"><h6>New</h6></div>
+                                        <a><img src="~/Image/Terror/Scream.jpg" alt="img"></a>
+                                        <div class="view-caption agileits-w3layouts">
+                                            <h4><a>Scream</a></h4>
+
+                                            <form action="#" method="post">
+                                                <input type="hidden" name="cmd" value="_cart" />
+                                                <input type="hidden" name="CantidadDisponibleAlquiler" value="4" asp-for="pelicula.CantidadDisponibleAlquiler" />
+                                                <input type="hidden" name="add" value="5" asp-for="pelicula.CantidadDisponibleVenta" />
+                                                <input type="hidden" name="w3ls_item" value="Scream" asp-for="pelicula.Nombre" />
+                                                <input type="hidden" name="amount" value="20.00" asp-for="pelicula.PrecioVenta" />
+                                                <button type="submit" class="w3ls-cart"><i class="fa fa-cart-plus" aria-hidden="true"></i> Compra $20</button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="glry-w3agile-grids agileits">
+                                        <a><img src="~/Image/Terror/LaMonja.jpg" alt="img"></a>
+                                        <div class="view-caption agileits-w3layouts">
+                                            <h4><a>La Monja</a></h4>
+
+                                            <form action="#" method="post">
+                                                <input type="hidden" name="cmd" value="_cart" />
+                                                <input type="hidden" name="CantidadDisponibleAlquiler" value="4" asp-for="pelicula.CantidadDisponibleAlquiler" />
+                                                <input type="hidden" name="add" value="5" asp-for="pelicula.CantidadDisponibleVenta" />
+                                                <input type="hidden" name="w3ls_item" value="La Monja" asp-for="pelicula.Nombre" />
+                                                <input type="hidden" name="amount" value="20.00" asp-for="pelicula.PrecioVenta" />
+                                                <button type="submit" class="w3ls-cart"><i class="fa fa-cart-plus" aria-hidden="true"></i> Compra $20</button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="glry-w3agile-grids agileits">
+                                        <a><img src="~/Image/Terror/ElConjuro2.jpg" alt="img"></a>
+                                        <div class="view-caption agileits-w3layouts">
+                                            <h4><a>El Conjuro 2</a></h4>
+                                            <form action="#" method="post">
+                                                <input type="hidden" name="cmd" value="_cart" />
+                                                <input type="hidden" name="CantidadDisponibleAlquiler" value="4" asp-for="pelicula.CantidadDisponibleAlquiler" />
+                                                <input type="hidden" name="add" value="5" asp-for="pelicula.CantidadDisponibleVenta" />
+                                                <input type="hidden" name="w3ls_item" value="El Conjuro 2" asp-for="pelicula.Nombre" />
+                                                <input type="hidden" name="amount" value="20.00" asp-for="pelicula.PrecioVenta" />
+                                                <button type="submit" class="w3ls-cart"><i class="fa fa-cart-plus" aria-hidden="true"></i> Compra $20</button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="glry-w3agile-grids agileits">
+                                        <div class="new-tag"><h6>Sale</h6></div>
+                                        <a><img src="~/Image/Terror/ElConjuro.jpg" alt="img"></a>
+                                        <div class="view-caption agileits-w3layouts">
+                                            <h4><a>El Conjuro</a></h4>
+
+                                            <form action="#" method="post">
+                                                <input type="hidden" name="cmd" value="_cart" />
+                                                <input type="hidden" name="add" value="4" asp-for="pelicula.CantidadDisponibleAlquiler" />
+                                                <input type="hidden" name="add" value="5" asp-for="pelicula.CantidadDisponibleVenta" />
+                                                <input type="hidden" name="w3ls_item" value="El Conjuro" asp-for="pelicula.Nombre" />
+                                                <input type="hidden" name="amount" value="20.00" asp-for="pelicula.PrecioVenta" />
+                                                <button type="submit" class="w3ls-cart"><i class="fa fa-cart-plus" aria-hidden="true"></i> Compra $20</button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+
+
+
+
+
+                                <div class="item">
+                                    <div class="glry-w3agile-grids agileits">
+                                        <div class="new-tag"><h6>New</h6></div>
+                                        <a><img src="~/Image/Terror/002_m.jpg" alt="img"></a>
+                                        <div class="view-caption agileits-w3layouts">
+                                            <h4><a>Ouija</a></h4>
+
+                                            <form action="#" method="post">
+                                                <input type="hidden" name="cmd" value="_cart" />
+                                                <input type="hidden" name="add" value="4" asp-for="pelicula.CantidadDisponibleAlquiler" />
+                                                <input type="hidden" name="add" value="5" asp-for="pelicula.CantidadDisponibleVenta" />
+                                                <input type="hidden" name="w3ls_item" value="Ouija" asp-for="pelicula.Nombre" />
+                                                <input type="hidden" name="amount" value="20.00" asp-for="pelicula.PrecioVenta" />
+                                                <button type="submit" class="w3ls-cart"><i class="fa fa-cart-plus" aria-hidden="true"></i> Compra $20</button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                 
+                    <div role="tabpanel" class="tab-pane fade" id="carl" aria-labelledby="carl-tab">
+                        <div class="tabcontent-grids">
+                            <script>
+                                $(document).ready(function () {
+                                    $("#owl-demo1").owlCarousel({
+
+                                        autoPlay: 3000, //Set AutoPlay to 3 seconds
+
+                                        items: 4,
+                                        itemsDesktop: [640, 5],
+                                        itemsDesktopSmall: [414, 4],
+                                        navigation: true
+
+                                    });
+
+                                });
+                            </script>
+                            <div id="owl-demo1" class="owl-carousel">
+                                <div class="item">
+                                    <div class="glry-w3agile-grids agileits">
+                                        <a href="products1.html"><img src="~/Image/Accion/Matrix.jpg" alt="img"></a>
+                                        <div class="view-caption agileits-w3layouts">
+                                            <h4><a href="products1.html">Matrix</a></h4>
+
+                                            <form action="#" method="post">
+                                                <input type="hidden" name="cmd" value="_cart" />
+                                                <input type="hidden" name="add" value="4" asp-for="pelicula.CantidadDisponibleAlquiler" />
+                                                <input type="hidden" name="add" value="5" asp-for="pelicula.CantidadDisponibleVenta" />
+                                                <input type="hidden" name="w3ls_item" value="Matrix" asp-for="pelicula.Nombre" />
+                                                <input type="hidden" name="amount" value="20.00" asp-for="pelicula.PrecioVenta" />
+                                                <button type="submit" class="w3ls-cart"><i class="fa fa-cart-plus" aria-hidden="true"></i> Compra $20</button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="glry-w3agile-grids agileits">
+                                        <div class="new-tag"><h6>20% <br> Off</h6></div>
+                                        <a href="products1.html"><img src="~/Image/Accion/C_13442.jpg" alt="img"></a>
+                                        <div class="view-caption agileits-w3layouts">
+                                            <h4><a href="products1.html">Terminator</a></h4>
+
+                                            <h5>$20 compra</h5>
+
+                                            <form action="#" method="post">
+                                                <input type="hidden" name="cmd" value="_cart" />
+                                                <input type="hidden" name="add" value="4" asp-for="pelicula.CantidadDisponibleAlquiler" />
+                                                <input type="hidden" name="add" value="5" asp-for="pelicula.CantidadDisponibleVenta" />
+                                                <input type="hidden" name="w3ls_item" value="Terminator" asp-for="pelicula.Nombre" />
+                                                <input type="hidden" name="amount" value="20.00" asp-for="pelicula.PrecioVenta" />
+                                                <button type="submit" class="w3ls-cart"><i class="fa fa-cart-plus" aria-hidden="true"></i> Compra $20</button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="glry-w3agile-grids agileits">
+                                        <a href="products1.html"><img src="~/Image/Accion/Undercover.jpg" alt="img"></a>
+                                        <div class="view-caption agileits-w3layouts">
+                                            <h4><a href="products1.html">Undercover</a></h4>
+
+                                            <h5>$60</h5>
+                                            <form action="#" method="post">
+                                                <input type="hidden" name="cmd" value="_cart" />
+                                                <input type="hidden" name="add" value="4" asp-for="pelicula.CantidadDisponibleAlquiler" />
+                                                <input type="hidden" name="add" value="5" asp-for="pelicula.CantidadDisponibleVenta" />
+                                                <input type="hidden" name="w3ls_item" value="Misión Imposible" asp-for="pelicula.Nombre" />
+                                                <input type="hidden" name="amount" value="60.00" asp-for="pelicula.PrecioVenta" />
+                                                <button type="submit" class="w3ls-cart"><i class="fa fa-cart-plus" aria-hidden="true"></i> Compra $60</button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="glry-w3agile-grids agileits">
+                                        <div class="new-tag"><h6>New</h6></div>
+                                        <a href="products1.html"><img src="~/Image/Accion/MisionImposible.jpg" alt="img"></a>
+                                        <div class="view-caption agileits-w3layouts">
+                                            <h4><a href="products1.html">Misión Imposible</a></h4>
+
+                                            <h5>$10</h5>
+                                            <form action="#" method="post">
+                                                <input type="hidden" name="cmd" value="_cart" />
+                                                <input type="hidden" name="add" value="4" asp-for="pelicula.CantidadDisponibleAlquiler" />
+                                                <input type="hidden" name="add" value="5" asp-for="pelicula.CantidadDisponibleVenta" />
+                                                <input type="hidden" name="w3ls_item" value="Misión Imposible" asp-for="pelicula.Nombre" />
+                                                <input type="hidden" name="amount" value="10.00" asp-for="pelicula.PrecioVenta" />
+                                                <button type="submit" class="w3ls-cart"><i class="fa fa-cart-plus" aria-hidden="true"></i> Compra $10</button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="glry-w3agile-grids agileits">
+                                        <a href="products1.html"><img src="~/Image/Accion/swat.jpg" alt="img"></a>
+                                        <div class="view-caption agileits-w3layouts">
+                                            <h4><a href="products1.html">S.W.A.T</a></h4>
+
+                                            <h5>$10</h5>
+                                            <form action="#" method="post">
+                                                <input type="hidden" name="cmd" value="_cart" />
+                                                <input type="hidden" name="add" value="4" asp-for="pelicula.CantidadDisponibleAlquiler" />
+                                                <input type="hidden" name="add" value="5" asp-for="pelicula.CantidadDisponibleVenta" />
+                                                <input type="hidden" name="w3ls_item" value="S.W.A.T" asp-for="pelicula.Nombre" />
+                                                <input type="hidden" name="amount" value="10.00" asp-for="pelicula.PrecioVenta" />
+
+                                                <button type="submit" class="w3ls-cart"><i class="fa fa-cart-plus" aria-hidden="true"></i> Comprar $10</button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane fade" id="james" aria-labelledby="james-tab">
+                        <div class="tabcontent-grids">
+                            <script>
+                                $(document).ready(function () {
+                                    $("#owl-demo2").owlCarousel({
+
+                                        autoPlay: 3000, //Set AutoPlay to 3 seconds
+
+                                        items: 4,
+                                        itemsDesktop: [640, 5],
+                                        itemsDesktopSmall: [414, 4],
+                                        navigation: true
+
+                                    });
+
+                                });
+                            </script>
+                            <div id="owl-demo2" class="owl-carousel">
+                                <div class="item">
+                                    <div class="glry-w3agile-grids agileits">
+                                        <div class="new-tag"><h6>Sale</h6></div>
+                                        <a href="products6.html"><img src="~/Image/Comedia/FreeGuy.jpg" alt="img"></a>
+                                        <div class="view-caption agileits-w3layouts">
+                                            <h4><a href="products6.html">Free Guy</a></h4>
+
+                                            <form action="#" method="post">
+                                                <input type="hidden" name="cmd" value="_cart" />
+                                                <input type="hidden" name="add" value="4" asp-for="pelicula.CantidadDisponibleAlquiler" />
+                                                <input type="hidden" name="add" value="5" asp-for="pelicula.CantidadDisponibleVenta" />
+                                                <input type="hidden" name="w3ls_item" value="Free Guy" asp-for="pelicula.Nombre" />
+                                                <input type="hidden" name="amount" value="20.00" asp-for="pelicula.PrecioVenta" />
+
+                                                <button type="submit" class="w3ls-cart"><i class="fa fa-cart-plus" aria-hidden="true"></i> Comprar $20</button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="glry-w3agile-grids agileits">
+                                        <a href="products6.html"><img src="~/Image/Comedia/image_4f447b1d.jpeg" alt="img"></a>
+                                        <div class="view-caption agileits-w3layouts">
+                                            <h4><a href="products6.html">Los increibles 2 </a></h4>
+
+
+                                            <form action="#" method="post">
+                                                <input type="hidden" name="cmd" value="_cart" />
+                                                <input type="hidden" name="add" value="4" asp-for="pelicula.CantidadDisponibleAlquiler" />
+                                                <input type="hidden" name="add" value="5" asp-for="pelicula.CantidadDisponibleVenta" />
+                                                <input type="hidden" name="w3ls_item" value="Los increibles 2" asp-for="pelicula.Nombre" />
+                                                <input type="hidden" name="amount" value="20.00" asp-for="pelicula.PrecioVenta" />
+
+                                                <button type="submit" class="w3ls-cart"><i class="fa fa-cart-plus" aria-hidden="true"></i> Comprar $20</button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="glry-w3agile-grids agileits">
+                                        <div class="new-tag"><h6>New</h6></div>
+                                        <a href="products6.html"><img src="~/Image/Comedia/Frozen2.jpg" alt="img"></a>
+                                        <div class="view-caption agileits-w3layouts">
+                                            <h4><a href="products6.html">Frozen 2</a></h4>
+
+
+                                            <form action="#" method="post">
+                                                <input type="hidden" name="cmd" value="_cart" />
+                                                <input type="hidden" name="add" value="4" asp-for="pelicula.CantidadDisponibleAlquiler" />
+                                                <input type="hidden" name="add" value="5" asp-for="pelicula.CantidadDisponibleVenta" />
+                                                <input type="hidden" name="w3ls_item" value="Frozen 2" asp-for="pelicula.Nombre" />
+                                                <input type="hidden" name="amount" value="20.00" asp-for="pelicula.PrecioVenta" />
+
+                                                <button type="submit" class="w3ls-cart"><i class="fa fa-cart-plus" aria-hidden="true"></i> Comprar $20</button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="glry-w3agile-grids agileits">
+                                        <div class="new-tag"><h6>20% <br> Estreno</h6></div>
+                                        <a href="products6.html"><img src="~/Image/Comedia/Unidos.jpg" alt="img"></a>
+                                        <div class="view-caption agileits-w3layouts">
+                                            <h4><a href="products6.html">Unidos</a></h4>
+
+                                            <h5>$20</h5>
+                                            <form action="#" method="post">
+                                                <input type="hidden" name="cmd" value="_cart" />
+                                                <input type="hidden" name="add" value="4" asp-for="pelicula.CantidadDisponibleAlquiler" />
+                                                <input type="hidden" name="add" value="5" asp-for="pelicula.CantidadDisponibleVenta" />
+                                                <input type="hidden" name="w3ls_item" value="Unidos" asp-for="pelicula.Nombre" />
+                                                <input type="hidden" name="amount" value="20.00" asp-for="pelicula.PrecioVenta" />
+
+                                                <button type="submit" class="w3ls-cart"><i class="fa fa-cart-plus" aria-hidden="true"></i> Comprar $20</button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="glry-w3agile-grids agileits">
+                                        <div class="new-tag"><h6>Estreno</h6></div>
+                                        <a href="products6.html"><img src="~/Image/Comedia/Brave-Indomable.jpg" alt="img"></a>
+                                        <div class="view-caption agileits-w3layouts">
+                                            <h4><a href="products6.html">Brave</a></h4>
+
+                                            <h5>$60</h5>
+                                            <form action="#" method="post">
+                                                <input type="hidden" name="cmd" value="_cart" />
+                                                <input type="hidden" name="add" value="4" asp-for="pelicula.CantidadDisponibleAlquiler" />
+                                                <input type="hidden" name="add" value="5" asp-for="pelicula.CantidadDisponibleVenta" />
+                                                <input type="hidden" name="w3ls_item" value="Brave" asp-for="pelicula.Nombre" />
+                                                <input type="hidden" name="amount" value="60.00" asp-for="pelicula.PrecioVenta" />
+
+                                                <button type="submit" class="w3ls-cart"><i class="fa fa-cart-plus" aria-hidden="true"></i> Comprar  $60</button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="glry-w3agile-grids agileits">
+                                        <a href="products6.html"><img src="~/Image/Comedia/Aladin.jpg" alt="img"></a>
+                                        <div class="view-caption agileits-w3layouts">
+                                            <h4><a href="products6.html">Aladin</a></h4>
+
+                                            <h5>$10</h5>
+                                            <form action="#" method="post">
+                                                <input type="hidden" name="cmd" value="_cart" />
+                                                <input type="hidden" name="add" value="4" asp-for="pelicula.CantidadDisponibleAlquiler" />
+                                                <input type="hidden" name="add" value="5" asp-for="pelicula.CantidadDisponibleVenta" />
+                                                <input type="hidden" name="w3ls_item" value="Aladin" asp-for="pelicula.Nombre" />
+                                                <input type="hidden" name="amount" value="10.00" asp-for="pelicula.PrecioVenta" />
+
+                                                <button type="submit" class="w3ls-cart"><i class="fa fa-cart-plus" aria-hidden="true"></i> Comprar  $10</button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane fade" id="decor" aria-labelledby="decor-tab">
+                        <div class="tabcontent-grids">
+                            <script>
+                                $(document).ready(function () {
+                                    $("#owl-demo3").owlCarousel({
+
+                                        autoPlay: 3000, //Set AutoPlay to 3 seconds
+
+                                        items: 4,
+                                        itemsDesktop: [640, 5],
+                                        itemsDesktopSmall: [414, 4],
+                                        navigation: true
+
+                                    });
+
+                                });
+                            </script>
+                            <div id="owl-demo3" class="owl-carousel">
+
+                                <div class="item">
+                                    <div class="glry-w3agile-grids agileits">
+                                        <a href="products3.html"><img src="~/Image/Drama/592219.jpg" alt="img"></a>
+                                        <div class="view-caption agileits-w3layouts">
+                                            <h4><a href="products3.html">Harry Potter </a></h4>
+
+                                            <form action="#" method="post">
+                                                <input type="hidden" name="cmd" value="_cart" />
+                                                <input type="hidden" name="add" value="4" asp-for="pelicula.CantidadDisponibleAlquiler" />
+                                                <input type="hidden" name="add" value="5" asp-for="pelicula.CantidadDisponibleVenta" />
+                                                <input type="hidden" name="w3ls_item" value="Harry Potter " asp-for="pelicula.Nombre" />
+                                                <input type="hidden" name="amount" value="80.00" asp-for="pelicula.PrecioVenta" />
+
+                                                <button type="submit" class="w3ls-cart"><i class="fa fa-cart-plus" aria-hidden="true"></i> Comprar  $80</button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="glry-w3agile-grids agileits">
+                                        <a href="products3.html"><img src="~/Image/Drama/Harry_Potter2.jpg" alt="img"></a>
+                                        <div class="view-caption agileits-w3layouts">
+                                            <h4><a href="products3.html">Harry Potter 2</a></h4>
+
+                                            <form action="#" method="post">
+                                                <input type="hidden" name="cmd" value="_cart" />
+                                                <input type="hidden" name="add" value="4" asp-for="pelicula.CantidadDisponibleAlquiler" />
+                                                <input type="hidden" name="add" value="5" asp-for="pelicula.CantidadDisponibleVenta" />
+                                                <input type="hidden" name="w3ls_item" value="Harry Potter 2" asp-for="pelicula.Nombre" />
+                                                <input type="hidden" name="amount" value="80.00" asp-for="pelicula.PrecioVenta" />
+
+                                                <button type="submit" class="w3ls-cart"><i class="fa fa-cart-plus" aria-hidden="true"></i> Comprar  $80</button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="glry-w3agile-grids agileits">
+                                        <a href="products3.html"><img src="~/Image/Drama/HarryPotter3.jpg" alt="img"></a>
+                                        <div class="view-caption agileits-w3layouts">
+                                            <h4><a href="products3.html">Harry Potter 3</a></h4>
+
+                                            <form action="#" method="post">
+                                                <input type="hidden" name="cmd" value="_cart" />
+                                                <input type="hidden" name="add" value="4" asp-for="pelicula.CantidadDisponibleAlquiler" />
+                                                <input type="hidden" name="add" value="5" asp-for="pelicula.CantidadDisponibleVenta" />
+                                                <input type="hidden" name="w3ls_item" value="Harry Potter 3" asp-for="pelicula.Nombre" />
+                                                <input type="hidden" name="amount" value="80.00" asp-for="pelicula.PrecioVenta" />
+
+                                                <button type="submit" class="w3ls-cart"><i class="fa fa-cart-plus" aria-hidden="true"></i> Comprar  $80</button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="glry-w3agile-grids agileits">
+                                        <a href="products3.html"><img src="~/Image/Drama/HarryPotter4.jpg" alt="img"></a>
+                                        <div class="view-caption agileits-w3layouts">
+                                            <h4><a href="products3.html">Harry Potter 4</a></h4>
+
+                                            <form action="#" method="post">
+                                                <input type="hidden" name="cmd" value="_cart" />
+                                                <input type="hidden" name="add" value="4" asp-for="pelicula.CantidadDisponibleAlquiler" />
+                                                <input type="hidden" name="add" value="5" asp-for="pelicula.CantidadDisponibleVenta" />
+                                                <input type="hidden" name="w3ls_item" value="Harry Potter 4" asp-for="pelicula.Nombre" />
+                                                <input type="hidden" name="amount" value="80.00" asp-for="pelicula.PrecioVenta" />
+
+                                                <button type="submit" class="w3ls-cart"><i class="fa fa-cart-plus" aria-hidden="true"></i> Comprar  $80</button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="glry-w3agile-grids agileits">
+                                        <a href="products3.html"><img src="~/Image/Drama/HarryPotter5.jpg" alt="img"></a>
+                                        <div class="view-caption agileits-w3layouts">
+                                            <h4><a href="products3.html">Harry Potter 5</a></h4>
+
+                                            <form action="#" method="post">
+                                                <input type="hidden" name="cmd" value="_cart" />
+                                                <input type="hidden" name="add" value="4" asp-for="pelicula.CantidadDisponibleAlquiler" />
+                                                <input type="hidden" name="add" value="5" asp-for="pelicula.CantidadDisponibleVenta" />
+                                                <input type="hidden" name="w3ls_item" value="Harry Potter 5" asp-for="pelicula.Nombre" />
+                                                <input type="hidden" name="amount" value="80.00" asp-for="pelicula.PrecioVenta" />
+
+                                                <button type="submit" class="w3ls-cart"><i class="fa fa-cart-plus" aria-hidden="true"></i> Comprar  $80</button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="glry-w3agile-grids agileits">
+                                        <a href="products3.html"><img src="~/Image/Drama/HarryPotter6.jpg" alt="img"></a>
+                                        <div class="view-caption agileits-w3layouts">
+                                            <h4><a href="products3.html">Harry Potter 6</a></h4>
+
+                                            <form action="#" method="post">
+                                                <input type="hidden" name="cmd" value="_cart" />
+                                                <input type="hidden" name="add" value="4" asp-for="pelicula.CantidadDisponibleAlquiler" />
+                                                <input type="hidden" name="add" value="5" asp-for="pelicula.CantidadDisponibleVenta" />
+                                                <input type="hidden" name="w3ls_item" value="Harry Potter 6" asp-for="pelicula.Nombre" />
+                                                <input type="hidden" name="amount" value="80.00" asp-for="pelicula.PrecioVenta" />
+
+                                                <button type="submit" class="w3ls-cart"><i class="fa fa-cart-plus" aria-hidden="true"></i> Comprar  $80</button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="glry-w3agile-grids agileits">
+                                        <a href="products3.html"><img src="~/Image/Drama/Harry_Potter7.jpg" alt="img"></a>
+                                        <div class="view-caption agileits-w3layouts">
+                                            <h4><a href="products3.html">Harry Potter 7</a></h4>
+
+                                            <form action="#" method="post">
+                                                <input type="hidden" name="cmd" value="_cart" />
+                                                <input type="hidden" name="add" value="4" asp-for="pelicula.CantidadDisponibleAlquiler" />
+                                                <input type="hidden" name="add" value="5" asp-for="pelicula.CantidadDisponibleVenta" />
+                                                <input type="hidden" name="w3ls_item" value="Harry Potter 7" asp-for="pelicula.Nombre" />
+                                                <input type="hidden" name="amount" value="80.00" asp-for="pelicula.PrecioVenta" />
+
+                                                <button type="submit" class="w3ls-cart"><i class="fa fa-cart-plus" aria-hidden="true"></i> Comprar  $80</button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class=" form-group">
+                                <input class="buttons btn-primary  btn-sm" style=" margin-bottom: 10rem;" type="submit" asp-page-handler="AltaPelicula" value="Terminar Compra">
+                            </div>
+
+                            @Html.ValidationMessageFor(Model => Model.ErrorMessage, "", new { @class = "text-danger" })
+                            @Html.ValidationMessageFor(Model => Model.MensajeOk, "", new { @class = "text-primary" })
+
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
